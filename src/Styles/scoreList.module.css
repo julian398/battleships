@@ -1,0 +1,38 @@
+.scoreList{
+    display: flex;
+    position: absolute;
+    width: 26vw;
+    height: 38vw;
+    left: 70%;
+    top: 5%;
+    
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    
+    background: rgba(255, 255, 255, 0.55);
+    border: 1vh solid #0075FF;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px);
+    /* Note: backdrop-filter has minimal browser support */
+    
+    border-radius: 5px;
+}
+
+.leaderboard{
+    margin-bottom: 2vh;
+    margin-top: 1vh;
+
+    font-family: Gothic A1;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 42px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}

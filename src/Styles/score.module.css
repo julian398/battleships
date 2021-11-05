@@ -1,0 +1,47 @@
+.rectangle{
+    width: 90%;
+    height: fit-content;
+
+    padding: 0.5rem;
+
+    background: #3778DA;
+    border-radius: 5%;
+
+    margin-bottom: 2vh;
+}
+
+.nick{
+    position: relative;
+    left: 5%;
+    right: 5%;
+
+    font-family: Gothic A1;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.score{
+    /* Player Score: Number */
+
+    position: relative;
+    left: 5%;
+    right: 5%;
+
+    font-family: Gothic A1;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
