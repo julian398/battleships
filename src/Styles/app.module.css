@@ -2,6 +2,7 @@
     display: flex;
 
     width: 100%;
+    height: 5vh;
 
     justify-content: center;
     align-items: center;
@@ -9,5 +10,6 @@
 
 .gamebackground{
     background-color: rgb(14, 135, 190);
-    
+    width: 100%;
+    height: 100%;
 }
