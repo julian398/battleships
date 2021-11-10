@@ -18,7 +18,7 @@ function App() {
   const [cellEnable, setCellEnable] = useState(false)
 
   return (
-    <div>
+    <div className = {s.main}>
       <StylesProvider injectFirst>
         <Switch>
           <Route path = "/" exact>
