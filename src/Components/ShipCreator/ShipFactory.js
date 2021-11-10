@@ -1,40 +1,40 @@
 const ShipFactory = function ()
 {
-    this.createShip= function (tipo, coord, orientation, state){
-        const ship;
-        if(tipo==2){
-            ship= new Lancha(coord, orientation, state);
-        }else if(tipo==3){
-            ship= new Submarino(coord, orientation, state);
-        }else if(tipo==4){
-            ship= new Fragata(coord, orientation, state);
-        }else if(tipo==5){
-            ship= new Lancha(coord, orientation, state);
+    this.createShip= function (tipo, coord, orientation){
+        let ship;
+        if(tipo===2){
+            ship= new Lancha(coord, orientation);
+        }else if(tipo===3){
+            ship= new Submarino(coord, orientation);
+        }else if(tipo===4){
+            ship= new Fragata(coord, orientation);
+        }else if(tipo===5){
+            ship= new PortaAviones(coord, orientation);
         }else {
             ship= new NullShip();
         }
         return ship;
     }
 }
-const Lancha= function (coord, orientation, state)
+const Lancha= function (coord, orientation)
 {
     this.coords= coord;
     this.orientation = orientation;
     this.state = [0,0];
 }
-const Fragata = function(coord, orientation, state)
+const Fragata = function(coord, orientation)
 {
     this.coords= coord;
     this.orientation = orientation;
     this.state = [0,0,0,0];
 }
-const Portaaviones = function(coord, orientation, state)
+const PortaAviones = function(coord, orientation)
 {
     this.coords= coord;
     this.orientation = orientation;
     this.state = [0,0,0,0,0];
 }
-const Submarino= function(coord, orientation, state)
+const Submarino= function(coord, orientation)
 {
     this.coords= coord;
     this.orientation = orientation;

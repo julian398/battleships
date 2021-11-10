@@ -3,9 +3,9 @@ import React, {useEffect, useState } from 'react';
 import CreateBoard from "../Util/CreateBoard.js";
 import Cell from './Cell';
 
-const GameBoard = ({nickName, setNickName, scores, setScores, score, setScore}) => {
+const GameBoard = ({score, setScore}) => {
     const [grid, setGrid] = useState([]);
-
+    
     useEffect(() => {
         function freshBoard() {
             const newBoard = CreateBoard(10);

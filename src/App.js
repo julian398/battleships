@@ -13,6 +13,10 @@ function App() {
   const [nickName, setNickName] = useState("");
   const [scores, setScores] = useState([]);
   const [score, setScore] = useState("")
+  const [shipType, setShipType] = useState()
+  const [orientation, setOrientation] = useState("")
+  const [cellEnable, setCellEnable] = useState(false)
+
   return (
     <div>
       <StylesProvider injectFirst>
@@ -24,9 +28,9 @@ function App() {
             <div className = {s.gamebackground}>
               <div className = {s.nickName}>{nickName}</div>
               <div style = {{marginLeft: '27%', marginTop: '5%'}}>
-                <GameBoard nickName={nickName} score={score} setScore={setScore}></GameBoard>
+                <GameBoard nickName={nickName} score={score} setScore={setScore} setShipType = {setShipType} setOrientation = {setOrientation} shipType = {shipType} orientation = {orientation}></GameBoard>
               </div>
-              <Placement></Placement>
+              <Placement setShipType = {setShipType} setOrientation = {setOrientation} cellEnable = {cellEnable} setCellEnable = {setCellEnable}></Placement>
             </div>
           </Route>
         </Switch>
