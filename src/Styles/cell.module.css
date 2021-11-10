@@ -1,0 +1,8 @@
+.button {
+    width: 40px;
+    height: 40px;
+    background-color: aquamarine;
+    color: blue;
+    display: 'flex';
+    border-radius: 0%;
+}

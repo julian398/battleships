@@ -1,7 +1,11 @@
 import './App.css';
-import { Switch, Route, Link } from "react-router-dom";
-import TitleScreen from './Components/TitleScreen';
 import React, {useState} from "react";
+import { Switch, Route } from "react-router-dom";
+import { StylesProvider } from "@material-ui/core/styles";
+import TitleScreen from './Components/TitleScreen';
+import GameBoard from './Components/GameBoard';
+import s from './Styles/app.module.css'
+
 
 function App() {
   //States
@@ -10,11 +14,22 @@ function App() {
   const [score, setScore] = useState("")
   return (
     <div>
-      <Switch>
-        <Route path = "/" exact>
-          <TitleScreen nickName={nickName} setNickName={setNickName} scores={scores} setScores={setScores} score={score} setScore={setScore}/>
-        </Route>
-      </Switch>
+      <StylesProvider injectFirst>
+        <Switch>
+          <Route path = "/" exact>
+            <TitleScreen nickName={nickName} setNickName={setNickName} scores={scores} setScores={setScores} score={score} setScore={setScore}/>
+          </Route>
+          <Route path = "/gameVS" >
+            <div className = {s.gamebackground}>
+              <div className = {s.nickName}>{nickName}</div>
+              <div style = {{marginLeft: '27%', marginTop: '10%'}}>
+                <GameBoard nickName={nickName} scores={scores} setScores={setScores} score={score} setScore={setScore}></GameBoard>
+              </div>
+            </div>
+
+          </Route>
+        </Switch>
+      </StylesProvider>
     </div>
   );
 }

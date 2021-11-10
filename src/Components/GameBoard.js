@@ -1,28 +1,34 @@
-import { useState } from "react"
+import React, {useEffect, useState } from 'react';
 
-const GameBoard = () =>{
+import CreateBoard from "../Util/CreateBoard.js";
+import Cell from './Cell';
 
-    //State
-    /*
-    For this this multidimensional array we define the following standard:
-    0 - Represents a space with water
-    1 - Represents a space with a player ship
-    2 - Represents a space with an enemy ship
+const GameBoard = ({nickName, setNickName, scores, setScores, score, setScore}) => {
+    const [grid, setGrid] = useState([]);
 
-    */
-    const [userBoard, setUserBoard] = useState([
-        [0,0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0,0]
-        ])
+    useEffect(() => {
+        function freshBoard() {
+            const newBoard = CreateBoard(10);
+            setGrid(newBoard);
+        }
+        freshBoard();
+    }, []);
 
-    return(
-        <div>
+    if (!grid.board) {
+        return <div>Loading</div>;
+    }
+    return grid.board.map(singleRow => {
+        return (
+            <div>
+                <div style={{ display: 'flex'}}>
+                    {singleRow.map((singleBlock) => {
+                        return <Cell details={singleBlock}/>;
+                    })}
+                </div>
+            </div>
+        );
+    });
+};
+export default GameBoard;
 
-        </div>
-    )
-}
+

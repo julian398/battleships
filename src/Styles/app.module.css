@@ -1,0 +1,13 @@
+.nickName{
+    display: flex;
+
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.gamebackground{
+    background-color: rgb(14, 135, 190);
+    
+}
