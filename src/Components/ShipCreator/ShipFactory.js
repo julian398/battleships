@@ -38,7 +38,7 @@ const Submarino= function(coord, orientation, state)
 {
     this.coords= coord;
     this.orientation = orientation;
-    this.state = [0,0,0,0,0];
+    this.state = [0,0,0];
 }
 const NullShip = function()
 {
