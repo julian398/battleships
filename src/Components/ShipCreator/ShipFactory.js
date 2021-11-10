@@ -20,25 +20,25 @@ const Lancha= function (coord, orientation, state)
 {
     this.coords= coord;
     this.orientation = orientation;
-    this.state = state;
+    this.state = [0,0];
 }
 const Fragata = function(coord, orientation, state)
 {
     this.coords= coord;
     this.orientation = orientation;
-    this.state = state;
+    this.state = [0,0,0,0];
 }
 const Portaaviones = function(coord, orientation, state)
 {
     this.coords= coord;
     this.orientation = orientation;
-    this.state = state;
+    this.state = [0,0,0,0,0];
 }
 const Submarino= function(coord, orientation, state)
 {
     this.coords= coord;
     this.orientation = orientation;
-    this.state = state;
+    this.state = [0,0,0,0,0];
 }
 const NullShip = function()
 {
